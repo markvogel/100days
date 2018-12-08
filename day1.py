@@ -13,4 +13,4 @@ def copy_public_desktop(target, source=myconstants.PUBLIC_DESKTOP):
 
 
 if __name__ == '__main__':
-    copy_public_desktop(myconstants.test)
+    copy_public_desktop(myconstants.test_host)

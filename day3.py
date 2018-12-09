@@ -1,3 +1,5 @@
+# This is intended to shutdown computers remotely in a Windows domain environment
+
 import os
 import myconstants
 

@@ -2,8 +2,8 @@
 # https://adventofcode.com/2018/day/22
 
 
-def erosion_level(geo_index: int, depth: int):
-    return (geo_index + depth) % 20183
+def erosion_level(index: int, depth: int):
+    return (index + depth) % 20183
 
 
 def calc_type(erosion_lvl: int):
@@ -28,5 +28,10 @@ def geo_index(coordinates: list, target: list):
 scan = [510, [10, 10]]
 
 if __name__ == '__main__':
+    risk = 0
     for i in range(10):
-        print(geo_index([i, 0], [10, 10]))
+        g_index = geo_index([i, 0], [10, 10])
+        g_index2 = geo_index([0, i], [10, 10])
+        risk += calc_type(erosion_level(g_index, 510))
+        risk += calc_type(erosion_level(g_index2, 510))
+    print(risk)

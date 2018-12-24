@@ -2,6 +2,7 @@
 .idea/
 day4_test.py
 myconstants.py
+input.py
 
 *.dll
 /venv

@@ -3,6 +3,7 @@
 day4_test.py
 myconstants.py
 input.py
+input2.py
 
 *.dll
 /venv

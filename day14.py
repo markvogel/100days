@@ -1,4 +1,4 @@
-# building off of yesterday, create a simple program to check if a work is the same forwards as backwards (palindrome)
+# building off of yesterday, create a simple program to check if a word is the same forwards as backwards (palindrome)
 
 
 def reverse_string(input_string):

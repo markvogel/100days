@@ -9,7 +9,7 @@ for s in test_sample:
 
 for s in test_sample:
     if s[0] != 's' and s in test_sample:
-        print(f'exists in list, but doesn\'t start with: {s}')
+        print(f'exists in list, but doesn\'t start with s: {s}')
 
 for s in test_sample:
     if s[0] != 's' and 's' + s in test_sample:

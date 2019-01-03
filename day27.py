@@ -55,6 +55,8 @@ def compare_rps2(c, d):
     return 'It is a tie'
 
 
+# https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html
+
 def guessing_game_one():
     import random
     # name = input("Give me your name: ")

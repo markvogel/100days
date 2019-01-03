@@ -8,6 +8,7 @@ def list_comprehension():
 
     print(a, b)
 
+
 # https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html
 
 def test_app():
@@ -45,8 +46,8 @@ def compare_rps(y, z):
 
 def compare_rps2(c, d):
     results1 = {1: ['rock', 'scissors'], 2: ['paper', 'rock'], 3: ['scissors', 'rock']}
-    test = [c, d]
-    test2 = [d, c]
+    test, test2 = [c, d], [d, c]
+    print(test, test2)
     if test in results1.values():
         return 'Player 1 wins'
     if test2 in results1.values():
@@ -54,7 +55,29 @@ def compare_rps2(c, d):
     return 'It is a tie'
 
 
+def guessing_game_one():
+    import random
+    # name = input("Give me your name: ")
+    random_num = str(random.randint(1, 9))
+    # print("Your name is " + name)
+    num_guesses = 0
+    guess = ''
+    while guess != random_num and guess != 'exit':
+        guess = input("Guess a number between 1 and 9 (or type exit to quit): ")
+        check_num(guess, random_num)
+        num_guesses += 1
+    print(f'It took you {num_guesses} guesses to guess the correct number.')
+
+
+def check_num(x, rnum):
+    if x > rnum:
+        print('The number you entered was too high')
+    if x < rnum:
+        print('The number that you entered was too low')
+
+
 if __name__ == '__main__':
-    p1 = rps('Player 1')
-    p2 = rps('Player 2')
-    print(compare_rps2(p1, p2))
+    # p1 = rps('Player 1')
+    # p2 = rps('Player 2')
+    # print(compare_rps2(p1, p2))
+    guessing_game_one()

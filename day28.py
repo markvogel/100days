@@ -20,6 +20,29 @@ def extra_app():
     return [i for i in r1 if i in r2]
 
 
+def get_number():
+    return input('Please enter a number: ')
+
+
+def create_list(num1):
+    return range(1, int(num1) + 1)
+
+
+def calc_divisors(number: int):
+    return [i for i in create_list(number) if number % i == 0]
+
+
+# https://www.practicepython.org/exercise/2014/04/16/11-check-primality-functions.html
+
+def check_prime(num: int):
+    if len(calc_divisors(num)) <= 2:
+        print("You entered a prime number!")
+    else:
+        print("The number that you entered is not a prime.")
+
+
 if __name__ == '__main__':
     # print(extra_app())
-    default_app()
+    # default_app()
+    n = get_number()
+    check_prime(int(n))

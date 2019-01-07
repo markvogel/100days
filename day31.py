@@ -10,5 +10,9 @@ def reverse_word_order(a: str):
     return ' '.join(split_list).capitalize()
 
 
+def reverse_sentence(b: str):
+    return ' '.join(b.split()[::-1])
+
+
 if __name__ == '__main__':
-    print(reverse_word_order(sample))
+    print(reverse_sentence(sample))

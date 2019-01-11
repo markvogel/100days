@@ -21,7 +21,7 @@ def get_titles(html_input: str):
 if __name__ == '__main__':
     # soup = BeautifulSoup(get_html(url))
     # print(soup.prettify())
-    # print(get_paragraphs(get_html(url)))  
+    # print(get_paragraphs(get_html(url)))
     for title in get_titles(get_html(url)):
         if 'Site' not in title.text:
             print(title.text)

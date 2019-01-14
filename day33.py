@@ -24,4 +24,5 @@ if __name__ == '__main__':
     # print(get_paragraphs(get_html(url)))
     for title in get_titles(get_html(url)):
         if 'Site' not in title.text:
-            print(title.text)
+            if 'Trump' in title.text:
+                print(title.text)

@@ -3,18 +3,43 @@
 # Try to get the best grade (gold) at the magic exam.
 # Move to each X mark, then use a spell.
 
+
+def action():
+    friend = hero.findNearestFriend()
+    enemy = hero.findNearestEnemy()
+    item = hero.findNearestItem()
+    if friend:
+        target = friend
+        if target.type == 'soldier':
+            hero.cast('heal', target)
+        if target.type == 'goliath':
+            hero.cast("grow", target)
+        if target.type == 'paladin':
+            hero.cast("regen", target)
+    if enemy:
+        target = enemy
+        if target.type == 'ogre':
+            hero.cast("force-bolt", target)
+        if target.type == 'brawler':
+            hero.cast("shrink", target)
+        if target.type == "scout":
+            hero.cast("poison-cloud", target)
+    if item:
+        target = item
+
+
 hero.moveXY(18, 40)
-hero.cast("heal", hero.findNearestFriend())
+action()
 hero.moveXY(18, 24)
-hero.cast("force-bolt", hero.findNearestEnemy())
+action()
 hero.moveXY(34, 40)
-hero.cast("grow", hero.findNearestFriend())
+action()
 hero.moveXY(34, 24)
-hero.cast("shrink", hero.findNearestEnemy())
+action()
 hero.moveXY(50, 40)
-hero.cast("regen", hero.findNearestFriend())
+action()
 hero.moveXY(50, 24)
-hero.cast("poison-cloud", hero.findNearestEnemy())
+action()
 hero.moveXY(66, 40)
 find_item()
 hero.moveXY(66, 24)
@@ -30,9 +55,8 @@ def find_item():
         y = pos.y
         hero.moveXY(x, y)
     if item.type == 'poison':
-        # Move to the position of the item.
-        hero.cast("regen", hero)
+        hero.cast("grow", hero)
         pos = item.pos
         x = pos.x
         y = pos.y
-        hero.say("poison")
+        hero.moveXY(x, y)

@@ -1,6 +1,6 @@
 # https://www.practicepython.org/exercise/2014/11/30/21-write-to-a-file.html
 
-import day33
+from under50 import day33
 
 url = 'https://www.nytimes.com/'
 

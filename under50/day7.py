@@ -1,7 +1,7 @@
 # get a list of computers from active directory, if the host is online, copy files to the hard drive across the network
 
-from under30.day1 import copy_network_files
-from under30 import day5, day4
+from under50.day1 import copy_network_files
+from under50 import day5, day4
 import myconstants
 
 

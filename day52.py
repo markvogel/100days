@@ -34,13 +34,22 @@ def test_suite():
     # test(day_num(day_name(3)) == 3)
     # test(day_name(day_num("Thursday")) == "Thursday")
     # test(day_num("Halloween") is None)
-    test(day_add("Monday", 4) == "Friday")
-    test(day_add("Tuesday", 0) == "Tuesday")
-    test(day_add("Tuesday", 14) == "Tuesday")
-    test(day_add("Sunday", 100) == "Tuesday")
-    test(day_add("Sunday", -1) == "Saturday")
-    test(day_add("Sunday", -7) == "Sunday")
-    test(day_add("Tuesday", -100) == "Sunday")
+    # test(day_add("Monday", 4) == "Friday")
+    # test(day_add("Tuesday", 0) == "Tuesday")
+    # test(day_add("Tuesday", 14) == "Tuesday")
+    # test(day_add("Sunday", 100) == "Tuesday")
+    # test(day_add("Sunday", -1) == "Saturday")
+    # test(day_add("Sunday", -7) == "Sunday")
+    # test(day_add("Tuesday", -100) == "Sunday")
+    # test(days_in_month("February") == 28)
+    # test(days_in_month("December") == 31)
+    test(to_secs(2, 30, 10) == 9010)
+    test(to_secs(2, 0, 0) == 7200)
+    test(to_secs(0, 2, 0) == 120)
+    test(to_secs(0, 0, 42) == 42)
+    test(to_secs(0, -10, 10) == -590)
+    test(to_secs(2.5, 0, 10.71) == 9010)
+    test(to_secs(2.433, 0, 0) == 8758)
 
 
 def absolute_value(x):
@@ -89,6 +98,19 @@ def day_name2(c: int):
     if c == 6:
         day = 'Saturday'
     return day
+
+
+# number 6 - http://openbookproject.net/thinkcs/python/english3e/fruitful_functions.html
+def days_in_month(month_name: str):
+    month_abbrev = month_name[:3].lower()
+    total_days = {'jan': 31, 'feb': 28, 'mar': 31, 'apr': 30, 'may': 31, 'jun': 30, 'jul': 31, 'aug': 31, 'sep': 30,
+                  'oct': 31, 'nov': 30, 'dec': 31}
+    return total_days.get(month_abbrev)
+
+
+def to_secs(hours_in, minutes_in, seconds_in):
+    total_seconds = (hours_in * 3600) + (minutes_in * 60) + seconds_in
+    return int(total_seconds)
 
 
 if __name__ == '__main__':

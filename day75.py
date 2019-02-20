@@ -20,7 +20,6 @@ def double_char(str):
 
 def count_code(str):
     return len([s.start() for s in re.finditer('co[a-z]e', str)])
-    # [0, 5, 10, 15]
 
 
 # without regex - http://gregorulm.com/coding-bat-python-string-2/

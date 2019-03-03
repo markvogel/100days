@@ -1,6 +1,8 @@
 from day65 import test
 
 
+# https://edabit.com/challenge/kBXHbwQZPiLmwjrMy
+
 def divisible(param):
     return not bool(param % 100)
 
@@ -14,16 +16,32 @@ def identify(a_str):
     if not len(a_str):
         return a_str
 
-    a_list = a_str.lower().split()
+    word_list = make_list(a_str)
 
-    for i in range(len(a_list)):
-        if a_list[i][0] in "aeiouy":
-            a_list[i] += "yay"
-        a_list[i] = a_list[i][1:] + a_list[i][0]
-        print(a_list[i])
+    for i in range(len(word_list)):
+        if starts_with_vowel(word_list[i]):
+            word_list[i] = add_yay(word_list[i])
+            break
+        if starts_with_vowel(word_list[i]):
+            word_list[i] = move_letter_to_end(word_list[i])
+    print(" ".join(word_list))
+    return " ".join(word_list)
 
-    a = "".join(a_list)
-    return a
+
+def starts_with_vowel(a_str):
+    return a_str[0] in "aeiouy"
+
+
+def move_letter_to_end(a_str):
+    return a_str[1:] + a_str[0]
+
+
+def add_yay(a_str):
+    return a_str + "yay"
+
+
+def make_list(a_str):
+    return a_str.lower().split()
 
 
 def test_suite():

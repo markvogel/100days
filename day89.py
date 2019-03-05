@@ -1,6 +1,7 @@
 from day65 import test
 
 
+# https://edabit.com/challenge/LPTb7HCWzofKdfM6S
 def find_frequent(lst):
     if not len(lst):
         return None
@@ -14,6 +15,7 @@ def find_frequent(lst):
     return var
 
 
+# https://edabit.com/challenge/W8QKA4YpzmeLeZWMX
 def expand(a_num):
     a_num = str(a_num)
     num_list = []

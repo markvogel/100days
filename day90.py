@@ -1,7 +1,7 @@
 from day65 import test
 
 
-# TODO not working, need to fix
+# TODO doesn't work, need to fix
 # https://edabit.com/challenge/ZFLmA6Xjt8gNxg4KR
 def sum_consecutives(a_list):
     new_list = []

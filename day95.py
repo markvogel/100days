@@ -26,8 +26,8 @@ To illustrate: change_enough([25, 20, 5, 0], 4.25) should yield True, since havi
 # https://edabit.com/challenge/phMpXM9nu52bCjguS
 def change_enough(change, amount_due):
     c = np.array(change)
-    change_conversion_list = np.array([.25, .10, .05, .01])
-    change_list = c * change_conversion_list
+    change_conv = np.array([.25, .10, .05, .01])
+    change_list = c * change_conv
     if sum(change_list) >= amount_due:
         return True
     return False

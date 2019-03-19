@@ -6,10 +6,10 @@ import string
 def time_to_eat(a_str):
     exclude = set(string.punctuation)
     a_str = ''.join(ch for ch in a_str if ch not in exclude)
-    hours, minutes, am_pm, time_minutes = convert_minutes(a_str)
-    # print(hours, minutes, am_pm, time_minutes)
+    time_minutes = convert_minutes(a_str)
+    print(time_minutes)
     if 420 < time_minutes < 720:
-        a_list = minutes_d(time_minutes, 420)
+        a_list = minutes_d(time_minutes, 0)
         print(a_list)
         return [a_list[0], a_list[1]]
     if time_minutes == 720:
@@ -24,7 +24,7 @@ def minutes_d(time_minutes, d):
     num_minutes = d - time_minutes
     hours = int(num_minutes / 60)
     minutes = num_minutes % 60
-    return [hours, minutes]
+    return [abs(hours), minutes]
 
 
 def convert_minutes(a_str):
@@ -33,8 +33,7 @@ def convert_minutes(a_str):
     hours = int(time_12[:-2])
     minutes = int(time_12[-2:])
     time_minutes = (hours * 60) + minutes
-    am_pm = the_time[1]
-    return [hours, minutes, am_pm, time_minutes]
+    return time_minutes
 
 
 def test_suite():

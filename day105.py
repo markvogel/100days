@@ -2,6 +2,7 @@ from under100.day65 import test
 from math import sqrt
 
 
+# https://edabit.com/challenge/eraBhwF8HkJDAa2pS
 def pirates_killed(pirates_gold, inequality):
     for index, gold in enumerate(pirates_gold):
         if abs(gold - max(pirates_gold)) > inequality[index]:
@@ -9,12 +10,14 @@ def pirates_killed(pirates_gold, inequality):
     return False
 
 
+# https://edabit.com/challenge/6pFZZ9CdSFDGhvNBc
 def factor_group(num):
     if num == int(sqrt(num)) ** 2:
         return "odd"
     return "even"
 
 
+# https://edabit.com/challenge/iMRN9YGK4mcYja9rY
 def accumulating_product(num_list):
     new = []
     if not len(num_list):

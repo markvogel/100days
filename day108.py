@@ -15,6 +15,14 @@ def intersection_union(num_list1, num_list2):
     return [intersection, union]
 
 
+def mystery_func2(num):
+    twos = num // 2
+    remainder = num % 2
+    new_num = int((twos * "2") + str(remainder))
+    print(new_num)
+    return new_num
+
+
 def test_suite():
     test(mystery_func([5, 7, 8, 2, 1], 2) == [1, 1, 0, 0, 1])
     test(mystery_func([9, 8, 16, 47], 4) == [1, 0, 0, 3])
@@ -28,6 +36,13 @@ def test_suite():
     test(intersection_union([5, 5], [5, 6]) == [[5], [5, 6]])
     test(intersection_union([7, 8, 9, 6], [9, 7, 6, 8]) == [[6, 7, 8, 9], [6, 7, 8, 9]])
     test(intersection_union([4, 1, 1, 2], [1, 4, 4, 4, 4, 4, 4]) == [[1, 4], [1, 2, 4]])
+    test(mystery_func2(3) == 21)
+    test(mystery_func2(9) == 2221)
+    test(mystery_func2(15) == 2227)
+    test(mystery_func2(17) == 22221)
+    test(mystery_func2(19) == 22223)
+    test(mystery_func2(24) == 22228)
+    test(mystery_func2(35) == 222223)
 
 
 if __name__ == '__main__':

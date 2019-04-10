@@ -18,8 +18,6 @@ def sudoku_validator(grid):
          (a[:3, 6:9]).sum(),
          (a[3:6, 6:9]).sum(),
          (a[6:9, 6:9]).sum()]
-    for i in b:
-        ff(i)
     for i in range(len(grid)):
         if a[:][i].sum() != 45:
             return False
@@ -27,9 +25,20 @@ def sudoku_validator(grid):
             return False
         if a[:3][:i + 3].sum() != 45:
             return False
-    return True
+    for i in b:
+        ff(i)
 
 
+# Test at line 53 ok.
+# Test at line 65 FAILED.
+# Test at line 76 FAILED.
+# Test at line 87 ok.
+# Test at line 98 FAILED.
+# Test at line 109 FAILED.
+# Test at line 120 FAILED.
+# Test at line 131 ok.
+# Test at line 142 ok.
+# Test at line 153 ok.
 def test_suite():
     # Validate 3 x 3 Boxes
     test(not sudoku_validator(

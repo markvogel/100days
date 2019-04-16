@@ -1,13 +1,12 @@
 from under100.day65 import test
 
 
+# https://edabit.com/challenge/K4Pqh67Y9gpixPfjo
 def is_valid_PIN(pin):
     if not pin.isdigit():
         return False
     a = len(pin)
-    if a == 4 or a == 6:
-        return True
-    return False
+    return a == 4 or a == 6
 
 
 def test_suite():

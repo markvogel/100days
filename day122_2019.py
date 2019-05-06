@@ -1,12 +1,16 @@
 from under100.day65 import test
 
 
+# https://edabit.com/challenge/bd2fLqAxHfGTx86Qx
 def can_complete(str1, str2):
+    original = str2
     for i in range(len(str1)):
+        if str1[0] != str2[0]:
+            return False
         if str1[i] not in str2:
             return False
-        # if str1[i] == str2[i]:
-        #     continue
+        if str1[i] != str2[i]:
+            str2 = str2.replace(str1[i], "")
     return True
 
 

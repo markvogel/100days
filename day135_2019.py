@@ -25,7 +25,12 @@ def show_stars(rows):
 
 
 def print_primes(limit):
-    r = [i for i in range(limit + 1)]
+    r = [i for i in range(2, limit)]
+    for i in r:
+        if i % i == 0:
+            print(f"{i} is not a prime number")
+        else:
+            print(f"{i} is a prime number")
 
 
 def test_suite():
@@ -39,3 +44,4 @@ if __name__ == '__main__':
     test_suite()
     # show_numbers(20)
     # show_stars(5)
+    print_primes(20)

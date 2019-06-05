@@ -1,6 +1,7 @@
 import random
 
 
+# http://www.practicepython.org/exercise/2014/04/10/10-list-overlap-comprehensions.html
 def list_overlap_comprehensions(list1, list2):
     return [i for i in list2 if i in set(list1)]
 

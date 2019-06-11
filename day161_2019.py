@@ -4,9 +4,9 @@ def greeting():
 
 
 def wage():
-    hours = input("Please enter the total number of hours: ")
-    rate = input("Please enter the rate per hour: ")
-    pay = int(hours) * int(rate)
+    hours = float(input(("Please enter the total number of hours: ")))
+    rate = float(input("Please enter the rate per hour: "))
+    pay = hours * rate
     pay = round(pay, 2)
 
     print(f"Pay: {pay}")

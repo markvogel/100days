@@ -14,6 +14,7 @@ def open_file():
         exit()
 
 
+# exercise 3
 def egg():
     print("na na boo boo".upper() + " TO YOU - You have been punk'd")
     exit()

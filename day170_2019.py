@@ -10,11 +10,11 @@ def middle(list2):
     return list2[1:-1]
 
 
-# a line in a text file with only From on it will break this program
+# a line in a text file with only "From" on it will break this program
 def e2():
-    fhand = open('test.txt')
+    infile = open('test.txt')
     count = 0
-    for line in fhand:
+    for line in infile:
         words = line.split()
         # print 'Debug:', words
         if len(words) == 0 and words[0] != 'From':

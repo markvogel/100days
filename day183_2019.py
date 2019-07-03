@@ -6,7 +6,7 @@ import pprint
 # Exercise 3
 def letters():
     l_dict = {}
-    infile = open('mbox-short.txt')
+    infile = open('german.txt')
     for line in infile:
         line = line.lower().strip()
         line = line.translate(str.maketrans('', '', string.punctuation))
@@ -36,8 +36,8 @@ def letters():
     # top = max(w_dict)
     # print(f"{top}: {w_dict.get(top)}")
     # # sender_list = sorted(list(w_dict.items()), reverse=True)
-    # sender_list = sorted([(v, k) for k, v in w_dict.items()], reverse=True)
-    pprint.pprint(l_dict)
+    letter_list = sorted([(v, k) for k, v in l_dict.items()], reverse=True)
+    pprint.pprint(letter_list)
 
 
 if __name__ == '__main__':

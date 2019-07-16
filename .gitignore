@@ -5,6 +5,8 @@ myconstants.py
 input.py
 input2.py
 *.txt
+send_sms.py
+day193_2019.py
 
 *.dll
 /venv

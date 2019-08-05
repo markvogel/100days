@@ -9,4 +9,5 @@ current_day = f"day{day_of_year}_{year}.py"
 if os.path.exists(current_day):
     print("Python file already exists for today.")
 else:
-    os.mknod(current_day)
+    f = open(current_day, "w+")
+    f.close()

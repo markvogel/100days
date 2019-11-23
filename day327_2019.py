@@ -9,3 +9,19 @@ def is_prime(x):
         if (x % n) == 0:
             return False
     return True
+
+
+def reverse(text):
+    r = ""
+    for c in range(1, len(text) + 1):
+        r += text[-c]
+    return r
+
+
+def anti_vowel(text):
+    vowels = ["a", "e", "i", "o", "u"]
+    new_text = ''
+    for c in text:
+        if c.lower() not in vowels:
+            new_text += c
+    return new_text

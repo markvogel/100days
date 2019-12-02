@@ -1,4 +1,5 @@
 # repo specific ignores
+puzzle_input.py
 .idea/
 day4_test.py
 myconstants.py

@@ -9,6 +9,7 @@ input2.py
 send_sms.py
 under100/day193_2019.py
 rename_files.py
+*.txt
 
 *.dll
 /venv

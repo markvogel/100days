@@ -1,6 +1,6 @@
 players = """SEAN - LEBIRO
 KEVIN - OPP
-SMITTY - SETTING 
+MIKE  - SETTING 
 COREY - OH, MIDDLE
 MARK - OH, MIDDLE 
 JESSE - OH
@@ -12,9 +12,9 @@ JERRY - MIDDLE
 JOSH - MIDDLE, OPP"""
 
 p = players.split(sep="\n")
-names = [i.split(sep="-") for i in p]
+names = [i.split() for i in p]
 
 print(p)
 print(names)
 for i in names:
-    print(i[1])
+    print(i[0])
